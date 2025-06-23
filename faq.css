@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+    height: 100%; 
+}
+
+h1{font-size: 3.5em; }
+h2{font-size:  2.7em; }
+h3{font-size: 2em; }
+p{font-size: 1em;}
+ul{list-style: none;}
+li{font-size: 1.25;}
+
+body {
+    min-height: 100vh; 
+    font-family: 'Poppins', sans-serif;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column; 
+    margin: 0;
+}
+
+header{
+    background-color: rgb(161, 160, 160);
+}
+
+header img{
+    margin: 0;
+    padding: 25px 30px;
+    width: 150px;
+}
+
+header img:hover{
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+header .container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    font-size: 1.2em;
+    padding: 8px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    transition: 0.9s;
+    display: inline-block; 
+}
+
+header a:hover{
+    transform:translateY(-10px);
+    color: #264653;
+}
+.container2 {
+    max-width: 1400px;
+    margin: auto;
+   
+}
+
+.container {
+    flex: 1; 
+    background: #fff;
+    margin: 50px auto 30px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    width: 90%; 
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 100%;
+}
+
+.faq-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    color: #264653;
+    margin-bottom: 20px;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-img {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 20px;
+}
+
+.content-accordion {
+    width: 100%;
+}
+
+.question-answer {
+    width: 100%;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 15px;
+}
+
+.title-question {
+    margin: 1.4rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.question-btn {
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.up-icon {
+    display: none;
+}
+
+.answer {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    display: none;
+    padding-bottom: 15px;
+}
+
+.show-text .answer {
+    display: block;
+}
+
+.show-text .up-icon {
+    display: inline;
+}
+
+.show-text .down-icon {
+    display: none;
+}
+
+.footer {
+    background: #264653;
+    padding: 20px;
+    width: 100%;
+    margin-top: auto; 
+}
+
+.social-icon, .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.social-icon {
+    margin: 10px 0;
+}
+
+.icon-elem, .menu-elem {
+    margin: 0 10px;
+}
+
+.icon {
+    color: white;
+    font-size: 32px;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+.menu-icon {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: 0.3s;
+}
+
+.menu-icon:hover {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 720px) {
+        header{
+        position: relative;
+        width: 100%;
+    }
+
+    header .container2{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        scroll-padding-right: 20px;
+    }
+
+    .accordion {
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .faq-img {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .accordion-img {
+        max-width: 420px;
+        margin-top: 50px;
+    }
+    
+    .content-accordion {
+        width: 55%;
+        margin-top: 0;
+    }
+    
+    .title {
+        font-size: 3rem;
+    }
+    
+    .menu-icon {
+        font-size: 20px;
+    }
+    
+    .text {
+        font-size: 20px;
+    }
+
+}
+

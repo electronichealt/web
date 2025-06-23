@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="recolec.css">
+    <title>Recolección de desechos tecnológicos</title>
+</head>
+<body>
+     <header>
+        <div class="container">
+             <a href="index.html">
+            <img src="media//logo.png" alt="logo">
+            </a>
+            <nav>
+                <a href="index.html">Página inicial</a>
+                <a href="#formulario">Recicla Ya!</a>
+                <a href="faq.html">Preguntas frecuentes</a>
+            </nav>
+        </div>
+    </header>
+    <section class="recolec">
+        <div class="container">
+            <div class="imgcon"></div>
+
+            <div class="texto">
+                <h2>Nuestra meta</h2>
+                <p>
+                    La tecnología avanza rápido, y con ella también crece la cantidad de dispositivos que dejamos de usar. Muchas veces, esos celulares viejos, cables, computadoras rotas o impresoras arrinconadas en casa terminan en la basura común, contaminando el suelo, el agua y afectando seriamente el medio ambiente.
+
+                    En nuestro proyecto, sabemos que los residuos electrónicos no son solo chatarra: también representan una oportunidad para hacer las cosas bien. Por eso, creamos esta iniciativa de recolección responsable de desechos electrónicos, con el fin de darles un mejor destino y reducir su impacto negativo.
+
+                    Recolectamos todo tipo de equipos electrónicos en desuso: computadoras, laptops, celulares, teclados, ratones, impresoras, módems, cables, cargadores y más. Una vez que los recibimos, los clasificamos cuidadosamente, identificamos qué puede ser reutilizado o reciclado, y nos aseguramos de que lo que no sirve sea desechado de manera segura y responsable, trabajando en conjunto con centros autorizados.
+
+                    Nuestra meta es clara: lograr que San Felipe, Gto. sea un ejemplo de conciencia tecnológica y ambiental, donde todas y todos entendamos la importancia de manejar adecuadamente los desechos electrónicos. Queremos construir una comunidad más informada, más comprometida con el entorno, y capaz de transformar sus hábitos en acciones reales que beneficien al planeta.
+
+                    Si tienes dispositivos que ya no usas, ¡no los tires! Escríbenos y con gusto pasamos por ellos.
+                    Recuerda: las pequeñas acciones de hoy pueden hacer un gran cambio mañana.
+                </p>
+            </div>
+
+            <div class="Ubicacion">
+                <h3>📍 Nos ubicamos cerca de ti:</h3>
+                <p>Calle 5 de Mayo #416</p>
+               <iframe src="https://www.google.com/maps/embed?pb=!3m2!1ses!2smx!4v1750640989376!5m2!1ses!2smx!6m8!1m7!1sYgn37YXhGrOyKZ6m4q6-uQ!2m2!1d21.48427697448664!2d-101.2068333621774!3f219.38652774718003!4f-5.219532163943242!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="formu" id="formulario">
+                <h2>Salva el mundo con nosotros</h2>
+                <form id="contactForm"> 
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+
+                <label for="tipo-dispositivo">Tipo de dispositivo que quieres donar:</label>
+                <input type="text" id="tipo-dispositivo" name="dispositivo" placeholder="Laptop, celular, impresora..." required>
+
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Ej: Calle Aventuras 113 col. Mañanas" required>
+
+                <button type="submit">Enviar solicitud</button>
+            </form>
+
+            <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+            <script>
+               
+                emailjs.init("ZNNEOYL8cDNvKWKeq"); 
+                
+                document.getElementById("contactForm").addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    
+                    
+                    emailjs.sendForm("service_iypk1bf", "template_gxufano", this)
+                        .then(function() {
+                            alert("¡Solicitud enviada! Recibirás un correo de confirmación.");
+                            
+                            e.target.reset();
+                        }, function(error) {
+                            alert("Ocurrió un error al enviar: " + error.text);
+                        });
+                });
+            </script>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="icon-elem">
+                <a href="#" class="icon">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=electronichealt@gmail.com"  target="_blank" rel="noopener noreferrer" class="icon">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu-elem">
+                <a href="index.html" class="menu-icon">Inicio</a>
+            </li>
+            <li class="menu-elem">
+                <a href="distancia.html" class="menu-icon">Contáctanos</a>
+            </li>
+            <li class="menu-elem">
+                <a href="recolec.html" class="menu-icon">Recicla Ya</a>
+            </li>
+            <li class="menu-elem">
+                <a href="nosotor.html" class="menu-icon">Sobre nosotros</a>
+            </li>
+        </ul>
+        <p class="text">@ElectronicHealt 2025 | Todos los derechos reservados</p>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

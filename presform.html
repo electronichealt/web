@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte a Distancia</title>
+    <link rel="stylesheet" href="distancia.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+             <a href="index.html">
+            <img src="media//logo.png" alt="logo">
+            </a>
+            <nav>
+                <a href="index.html">Página inicial</a>
+                <a href="presencial.html">Agenda una cita</a>
+                <a href="faq.html">Preguntas frecuentes</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="map">
+         <p>Nos ubicamos en: Calle 5 de Mayo #416</p>
+    <div class="ubi">
+   
+    <iframe src="https://www.google.com/maps/embed?pb=!3m2!1ses!2smx!4v1750640989376!5m2!1ses!2smx!6m8!1m7!1sYgn37YXhGrOyKZ6m4q6-uQ!2m2!1d21.48427697448664!2d-101.2068333621774!3f219.38652774718003!4f-5.219532163943242!5f0.7820865974627469" width="400" height="400" style="border: 20px;;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </section>
+
+
+    <main>
+        <h2 class="sub">Agenda tu cita</h2>
+        <section id="formulario">
+            <div class="container">
+                
+                <h2>Contáctanos</h2>
+                <form id="contactFormu" >
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                    <label for="telefono">Télefono de contacto:</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="Ej: 4281098767" required>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+
+                    <label for="dispositivo">Tipo de dispositivo:</label>
+                    <input type="text" id="dispositivo" name="dispositivo" placeholder="Laptop, celular, impresora..." required>
+
+                    <label for="marca">Marca y modelo del dispositivo (si se conoce):</label>
+                    <input type="text" id="marca" name="marca" value="no especificado">
+
+                    <label for="fecha">Fecha preferida:</label>
+                    <input type="date" id="fecha" name="fecha"  required>
+
+                     <label for="hora">Hora preferida:</label>
+                    <input type="time" id="hora" name="hora" required>
+
+                    <label for="problema">Describe el problema:</label>
+                    <textarea id="problema" name="problema" rows="5" placeholder="Cuéntamos qué sucede..." required></textarea>
+
+                    
+
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+                <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+            <script>
+               
+                emailjs.init("AwHb9WxAkNHxKDsP4"); 
+                
+                    document.getElementById("contactFormu").addEventListener("submit", function(e) {
+                        e.preventDefault();
+
+                        const form = this;
+
+                        
+                        emailjs.sendForm("service_qint6cb", "template_zovd4mi", form)
+                            .then(function() {
+                                emailjs.sendForm("service_qint6cb", "template_it25qmj", form)
+                                    .then(function() {
+                                        alert("¡Solicitud enviada con éxito nos pondremos en contacto muy pronto ;)!");
+                                        form.reset();
+                                    }, function(error) {
+                                        alert("Error al enviar  " + error.text);
+                                    });
+
+                            }, function(error) {
+                                alert("Error al enviar " + error.text);
+                            });
+                    });
+            </script>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="icon-elem">
+                <a href="#" class="icon">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=electronichealt@gmail.com"  target="_blank" rel="noopener noreferrer" class="icon">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu-elem">
+                <a href="index.html" class="menu-icon">Inicio</a>
+            </li>
+            <li class="menu-elem">
+                <a href="distancia.html" class="menu-icon">Contáctanos</a>
+            </li>
+            <li class="menu-elem">
+                <a href="recolec.html" class="menu-icon">Recicla Ya</a>
+            </li>
+            <li class="menu-elem">
+                <a href="nosotor.html" class="menu-icon">Sobre nosotros</a>
+            </li>
+        </ul>
+        <p class="text">@ElectronicHealt 2025 | Todos los derechos reservados</p>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
